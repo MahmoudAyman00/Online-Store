@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Temporary fallback
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.2' // Updated Gradle Plugin version
+        classpath 'com.google.gms:google-services:4.4.0' // Firebase Plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Temporary fallback
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
